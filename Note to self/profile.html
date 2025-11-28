@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Settings - Note to Self</title>
+    <meta name="description" content="Manage your profile and preferences">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #5DADE2;
+            --accent-color: #85C1E9;
+            --background-color: #0F172A;
+            --text-color: #E2E8F0;
+            --card-background: #1E293B;
+            --border-color: #334155;
+        }
+
+        [data-theme="light"] {
+            --primary-color: #3B82F6;
+            --secondary-color: #60A5FA;
+            --accent-color: #93C5FD;
+            --background-color: #F8FAFC;
+            --text-color: #1E293B;
+            --card-background: #FFFFFF;
+            --border-color: #E2E8F0;
+        }
+    }
+
+    @layer base {
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            @apply px-6 py-3 rounded-full font-medium transition-all duration-300 hover:shadow-lg;
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .card {
+            @apply rounded-2xl p-6 shadow-sm transition-all duration-300;
+            background-color: var(--card-background);
+            border: 1px solid var(--border-color);
+        }
+
+        .nav-link {
+            @apply flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200;
+        }
+
+        .nav-link:hover {
+            background-color: var(--secondary-color);
+            opacity: 0.8;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="components/Navigation.js"></script>
+    <script type="text/babel" src="utils/authService.js"></script>
+    <script type="text/babel" src="profile-app.js"></script>
+</body>
+</html>

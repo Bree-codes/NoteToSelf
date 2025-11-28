@@ -1,0 +1,66 @@
+[
+  {
+    "name": "user",
+    "fields": [
+      {
+        "name": "Name",
+        "type": "text",
+        "description": "User's full name",
+        "options": null
+      },
+      {
+        "name": "Email",
+        "type": "text",
+        "description": "User's email address",
+        "options": null
+      },
+      {
+        "name": "Password",
+        "type": "text",
+        "description": "Encrypted user password",
+        "options": null
+      },
+      {
+        "name": "CreatedAt",
+        "type": "datetime",
+        "description": "Account creation timestamp",
+        "options": null
+      }
+    ]
+  },
+  {
+    "name": "journal",
+    "fields": [
+      {
+        "name": "Entry",
+        "type": "rich_text",
+        "description": "Journal entry content",
+        "options": null
+      },
+      {
+        "name": "Mood",
+        "type": "text",
+        "description": "User's mood selection",
+        "options": [
+          "Amazing",
+          "Good",
+          "Okay",
+          "Low",
+          "Difficult"
+        ]
+      },
+      {
+        "name": "Gratitude",
+        "type": "array",
+        "description": "List of gratitude items",
+        "options": null
+      },
+      {
+        "name": "Date",
+        "type": "datetime",
+        "description": "Entry creation date",
+        "options": null
+      }
+    ]
+  }
+]
